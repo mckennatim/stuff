@@ -10,5 +10,15 @@
 <div class="jumbotron">
   <h1>stuff2get</h1>
   <p><a class="btn btn-lg btn-success" ng-href="#">timeStamp</a></p>
+  <p>{{timestamp}} </p>
 </div>
+<div ng-controller="GottenCtrl">
 
+      Search: <input ng-model="query">
+        <ul class="gotten" >
+          <li ng-repeat="got in gotten | filter:query">
+            {{got}}
+          </li>
+        </ul>  
+
+</div>
