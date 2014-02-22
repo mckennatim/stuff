@@ -6,19 +6,32 @@
   </ul>
   <h3 class="text-muted">stuff</h3>
 </div>
+<div ng-app="stuffApp">
+  <div class="jumbotron" ng-controller="TimeCtrl">
+    <h1>stuff2get</h1>
+    <p><a class="btn btn-lg btn-success" ng-model="timestamp">timeStamp</a></p>
+    <p>{{timestamp}} </p>
+  </div>
 
-<div class="jumbotron">
-  <h1>stuff2get</h1>
-  <p><a class="btn btn-lg btn-success" ng-href="#">timeStamp</a></p>
-  <p>{{timestamp}} </p>
-</div>
-<div ng-controller="GottenCtrl">
+  <div ng-controller="GottenCtrl">
+    Search: <input ng-model="query">  
+    <ul class="gotten" >
+      <li ng-repeat="got in gotten | filter:query">
+        {{got}}
+      </li>
+    </ul>  
+  </div>
 
-      Search: <input ng-model="query">
-        <ul class="gotten" >
-          <li ng-repeat="got in gotten | filter:query">
-            {{got}}
-          </li>
-        </ul>  
-
-</div>
+  <div ng-controller="InpCtrl">
+    <form ng-submit="submit()" >
+       Enter text and hit enter:
+       <input type="text" ng-model="text" name="text" />
+       <input type="submit" id="submit" value="Submit" />
+    </form>
+    <ul class="list" >
+      <li ng-repeat="item in list">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</div> 
