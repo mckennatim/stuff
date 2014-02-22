@@ -1,13 +1,18 @@
 'use strict';
+var app = angular.module('stuffApp');
 
-angular.module('stuffApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.timestamp = Date.now();
-    console.log($scope.timestamp);  
+
+app.controller('MainCtrl', function ($scope) {
+    $scope.dog = 'mutt';
+    console.log($scope.dog);  
   });
 
-angular.module('stuffApp') 
-.controller('InpCtrl', function ($scope) {
+app.controller('TimeCtrl', function ($scope) {
+    $scope.timestamp = Date.now();
+    console.log($scope.timestamp);  
+  });  
+
+app.controller('InpCtrl', function ($scope) {
  $scope.list = [];
  $scope.text = 'hello';
  $scope.submit = function() {
@@ -18,13 +23,11 @@ angular.module('stuffApp')
  };    
 });
 
-angular.module('stuffApp')
-.controller('GottenCtrl', function ($scope) {
-$scope.gotten = [
-  'banana',
-  'coffee',
-  'brown sugar',
-  'bacon'
-];
-console.log('in gotten');
+app.controller('GottenCtrl', function ($scope) {
+  $scope.gotten = [
+    'banana',
+    'coffee',
+    'brown sugar',
+    'bacon'
+  ];
 });
