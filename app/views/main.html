@@ -11,12 +11,19 @@
 
   <div class="jumbotron" ng-controller="TimeCtrl">
     <h1>stuff2get</h1>
-    <p><a class="btn btn-lg btn-success" ng-href="#">timeStamp</a></p>
+    <p>
+    <form ng-submit="tubmit()" >
+       <input type="submit" id="time-stamp" value="timeStamp"/>
+    </form>
     <p>{{timestamp}} </p>
   </div>
 
   <div ng-controller="GottenCtrl">
-    Search: <input ng-model="query">  
+    <form ng-submit="rubmit()">
+      Search: <input ng-model="query">  
+      <input type="submit" id="submit2" value="Append" />   
+    </form>
+  
     <ul class="gotten" >
       <li ng-repeat="got in gotten | filter:query">
         {{got}}
