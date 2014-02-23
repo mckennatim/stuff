@@ -1,0 +1,30 @@
+==js frameworks==
+http://eviltrout.com/2013/06/15/ember-vs-angular.html
+
+http://coenraets.org/blog/2012/02/sample-application-with-angular-js/
+http://www.ekito.fr/people/?p=3224
+
+===[[angularJS]]===
+===[[mongodb]]===
+===[[node]]===
+===[[meteor]]===
+===[[ember]]===
+
+==plan== 
+
+===use yeoman===
+    mkdir my-app
+    cd my-app
+    npm install generator-angular
+    yo angular
+
+in Gruntfile.js change connect: hsotname: from 'localhsot' to '10.0.1.24' so it will run on LAN
+    grunt serve
+
+
+===rewrite stuff2get using angular===
+
+<syntaxhighlight lang="javascript">
+    it('sends a timestamp to a sever every time you push a button', function() {});
+</syntaxhighlight>
+
